@@ -1,0 +1,85 @@
+html{
+	height: 100%;
+}
+
+body{
+	font: 'Raleway', sans-serif;
+	color: rgba(0,0,0,.5);
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: .5em;
+	top: 15%;
+	/*background: linear-gradient(to right, blue, yellow);*/
+}
+
+h1{
+	font: 600 3.5em 'Raleway', sans-serif;
+	color: rgba(0, 0, 0, 0.5);
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: .5em;
+	width: 100%;
+	text-shadow: 3px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+   font: 200 2em 'Raleway', sans-serif;
+   margin-top: 50px;
+   text-shadow: 3px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+p {
+    font: 200 1em 'Raleway', sans-serif;
+    text-shadow: 3px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+h3{
+	font: 900 1em 'Raleway', sans-serif;
+	color: rgba(0, 0, 0, .5);
+	text-align: center;
+	text-transform: none;
+	letter-spacing: 0.01em;
+	text-shadow: 3px 1px 10px rgba(0, 0, 0, 0.3);
+	margin-bottom: 50px;
+}
+
+.button {
+  margin: 0;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #37FF8B;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
